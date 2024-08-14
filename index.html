@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="css\style.css">
+        <script src="js\script.js"></script>
     </head>
     <body>
         <header>
@@ -17,21 +18,25 @@
         <main>
             <aside>
                 <article>
-                    <p>Body Mass Index atau BMI adalah perkiraan lemak tubuh yang didasarkan pada tinggi dan berat badan. Dengan melakukan perhitungan BMI, Anda dapat memperkirakan apakah berat badan yang dimiliki sudah tergolong normal, kurus (underweight), atau obesitas (overweight). <br>Ayo menghitung BMI Anda untuk mencari tahu betapa sehat berat badanmu.
+                    <p class="bmi-opening">Body Mass Index atau BMI adalah perkiraan lemak tubuh yang didasarkan pada tinggi dan berat badan. Dengan melakukan perhitungan BMI, Anda dapat memperkirakan apakah berat badan yang dimiliki sudah tergolong normal, kurus (underweight), atau obesitas (overweight). <br>Ayo menghitung BMI Anda untuk mencari tahu betapa sehat berat badanmu.
                     </p>
                 </article>
                 <form>
                     <div>
                         <h3>Jenis Kelamin</h3>
-                        <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">Laki-Laki</label>
+                        <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">   Laki-Laki</label>
                         <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label for="perempuan">Perempuan</label>
                     </div>
                     <div>
                         <h3>Berat Badan</h3>
-                        <input type="number">
+                        <input type="number" name="berat-badan" id="berat-badan">
+                    </div>
+                    <div>
+                        <h3>Tinggi Badan</h3>
+                        <input type="number" name="tinggi-badan" id="tinggi-badan"> 
                     </div>
                     <div class="form-btn-container">
-                        <button class="button bg-cornsilk">Hitung BMI</button>
+                        <button class="button bg-cornsilk" type="button" onclick="printheight()">Hitung BMI</button>
                         <button class="button bg-reset">Reset</button>
                     </div>
                 </form>
