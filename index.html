@@ -9,6 +9,7 @@
     </head>
     <body>
         <header>
+            <!-- Main Title -->
             <div class="title">
                 <p class="box">RevoU Mini Project</p>
                 <h1 class="box title-text">Kalkulator BMI</h1>
@@ -16,46 +17,60 @@
             </div>
         </header>
         <main>
-            <aside>
+            <aside class="left-flex"> <!-- Left Side -->
                 <article>
+                    <!-- Explain BMI -->
                     <p class="bmi-opening">Body Mass Index atau BMI adalah perkiraan lemak tubuh yang didasarkan pada tinggi dan berat badan. Dengan melakukan perhitungan BMI, Anda dapat memperkirakan apakah berat badan yang dimiliki sudah tergolong normal, kurus (underweight), atau obesitas (overweight). <br>Ayo menghitung BMI Anda untuk mencari tahu betapa sehat berat badanmu.
                     </p>
                 </article>
-                <form>
+                <form id="bmi-form"> <!-- Main Form-->
                     <div>
                         <h3>Jenis Kelamin</h3>
                         <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">   Laki-Laki</label>
                         <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label for="perempuan">Perempuan</label>
                     </div>
                     <div>
-                        <h3>Berat Badan</h3>
+                        <h3>Berat Badan (kg)</h3>
                         <input type="number" name="berat-badan" id="berat-badan">
                     </div>
                     <div>
-                        <h3>Tinggi Badan</h3>
+                        <h3>Usia (tahun)</h3>
+                        <input type="number" name="usia" id="usia"> 
+                    </div>
+                    <div>
+                        <h3>Tinggi Badan (cm)</h3>
                         <input type="number" name="tinggi-badan" id="tinggi-badan"> 
                     </div>
                     <div class="form-btn-container">
-                        <button class="button bg-cornsilk" type="button" onclick="printheight()">Hitung BMI</button>
-                        <button class="button bg-reset">Reset</button>
+                        <button class="button bg-cornsilk" type="button" onclick="validateForm()">Hitung BMI</button>
+                        <button class="button bg-reset" type="button" onclick="resetForm()">Reset</button>
                     </div>
                 </form>
-                <article>
+                <article> <!-- Features of above form -->
                     <header>
-                        <h2>Form Information</h2>
+                        <h2>Form Features:</h2>
                     </header>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <ul>
+                        <li>Menghitung berat badan</li>
+                        <li>Menentukan kategori berat badan</li>
+                        <li>Mempersiapkan program penurunan berat badan</li>
+                    </ul>
+                    <!-- to describe calc -->
+                    <p class="deskripsi-kalkulator">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+                    <p class="deskripsi-kalkulator">Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indek Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.
+                    </p>
                 </article>
             </aside>
 
-            <aside>
-                <section>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </section>
+            <aside class="right=flex"> <!-- Right Side, show BMI results -->
+                <h1 id="text-pre-bmi">Hasil akan ditunjukkan pada bagian ini.</h1>
+                <div id="result-bmi" class="result-bmi"></div>
+                <p id="sugs-for-bmi" class="sugs-for-bmi"></p>
+                <p id="advice-for-bmi" class="advice-for-bmi"></p>
             </aside>
         </main>
         
-        <footer>
+        <footer> <!-- by me, dawnbreakerr on discord! -->
             <p>Made by Callum A. M.</p>
         </footer>
     </body>

@@ -5,6 +5,12 @@
     font-family: "Poppins";
 }
 
+/* BG color for body */
+body {
+    background-color: #529981;
+}
+
+/* Main Title formatting */
 .title {
     margin: 10px 45px;
     background-color: #7fffd4;
@@ -14,21 +20,13 @@
     display:flex;
 }
 
+/* Allows the three text pieces in the title to be next to eachother */
 .title .box {
     display:flex;
     flex:1;
     justify-content: space-around;
     align-items: center;
 }
-
-@media (max-width: 800px) {
-    .title {
-      flex-direction: column;
-    }
-    .title .box {
-        margin:5px;
-    }
-  }
 
 .title-text {
     text-align: center;
@@ -37,16 +35,23 @@
 
 form {
     padding:12px;
-    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
 }
 
+/* Ensuring the ASIDE elements stay the same size regardless of content, but this will be overriden by Responsive */
 main {
-    display:flex;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 aside {
     padding:48px;
     padding-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #eee;
 }
 
 .button {
@@ -72,7 +77,22 @@ aside {
 .bmi-opening {
     text-align: justify;
 }
+.result-bmi {
+    visibility: hidden;
+    border: 3px solid black;
+    background-color:#7fffd4;
+    font-size: 32px;
+    text-align: center;
+}
 
+#text-pre-bmi {
+    text-align: center;
+}
+
+.deskripsi-kalkulator {
+    text-align:justify;
+}
+/* Make input look better */
 input[type=number] {
     width:100%;
     padding: 12px 20px;
@@ -88,3 +108,17 @@ input[type=number] {
 footer {
     text-align:center;
 }
+
+/* Responsive section */
+@media (max-width: 800px) {
+    .title {
+      flex-direction: column;
+    }
+    .title .box {
+        margin:5px;
+    }
+    main {
+        display:flex;
+        flex-direction: column;
+    }
+  }
